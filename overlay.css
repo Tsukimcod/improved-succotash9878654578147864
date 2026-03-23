@@ -1,0 +1,86 @@
+
+.controller.custom {
+  background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/OPTI%20M8%20SCUF%20BACKGROUND%20(1).jpeg") no-repeat center;
+  background-size: contain;
+  width: 1100px;
+  height: 1100px;
+  position: relative;
+}
+
+/* ===== BOUTONS (BASE) ===== */
+.button {
+  position: absolute;
+  opacity: 0;
+  transition: 0.1s ease;
+}
+
+/* ===== BOUTONS PRESSES ===== */
+.button.pressed {
+  opacity: 1;
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px cyan);
+}
+
+/* ===== EXEMPLES BOUTONS ===== */
+
+/* CROIX */
+.button.cross {
+  left: 600px;
+  top: 500px;
+  width: 50px;
+  height: 50px;
+  background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/boutton%20pr%C3%A9ss%C3%A9%20final.png") no-repeat center;
+  background-size: contain;
+}
+
+/* CERCLE */
+.button.circle {
+  left: 660px;
+  top: 460px;
+  width: 50px;
+  height: 50px;
+  background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/boutton%20pr%C3%A9ss%C3%A9%20final.png") no-repeat center;
+  background-size: contain;
+}
+
+/* CARRÉ */
+.button.square {
+  left: 540px;
+  top: 460px;
+  width: 50px;
+  height: 50px;
+  background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/boutton%20pr%C3%A9ss%C3%A9%20final.png") no-repeat center;
+  background-size: contain;
+}
+
+/* TRIANGLE */
+.button.triangle {
+  left: 600px;
+  top: 420px;
+  width: 50px;
+  height: 50px;
+  background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/boutton%20pr%C3%A9ss%C3%A9%20final.png") no-repeat center;
+  background-size: contain;
+}
+
+/* ===== STICKS ===== */
+.stick {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: url("stick.png") no-repeat center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+}
+
+/* STICK GAUCHE */
+.stick.left {
+  left: 350px;
+  top: 600px;
+}
+
+/* STICK DROIT */
+.stick.right {
+  left: 750px;
+  top: 600px;
+}
