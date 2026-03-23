@@ -1,5 +1,5 @@
-.button { opacity: 1 !important; border: 1px solid red; }
-.controller.custom {
+/* ======================== CONTENEUR MANETTE ======================== */
+.controller.dualsense {
   background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/OPTI%20M8%20SCUF%20BACKGROUND%20(1).jpeg") no-repeat center;
   background-size: contain;
   width: 1100px;
@@ -7,22 +7,22 @@
   position: relative;
 }
 
-/* ===== BOUTONS (BASE) ===== */
+/* ======================== BOUTONS (BASE) ======================== */
 .button {
   position: absolute;
-  opacity: 0;
+  opacity: 1; /* visible dès le départ pour debug */
   transition: 0.1s ease;
+  border: 1px solid red; /* juste pour visualiser */
 }
 
-/* ===== BOUTONS PRESSES ===== */
+/* ======================== BOUTONS PRESSES ======================== */
 .button.pressed {
   opacity: 1;
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 10px cyan);
+  transform: scale(1.1) rotate(-5deg); /* légèrement incliné quand pressé */
+  filter: drop-shadow(0 0 10px cyan); /* glow cyan */
 }
 
-/* ===== EXEMPLES BOUTONS ===== */
-
+/* ======================== EXEMPLES BOUTONS ======================== */
 /* CROIX */
 .button.cross {
   left: 600px;
@@ -63,12 +63,12 @@
   background-size: contain;
 }
 
-/* ===== STICKS ===== */
+/* ======================== STICKS ======================== */
 .stick {
   position: absolute;
   width: 80px;
   height: 80px;
-  background: url("stick.png") no-repeat center;
+  background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/stick.png") no-repeat center;
   background-size: contain;
   transform: translate(-50%, -50%);
 }
