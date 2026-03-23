@@ -1,86 +1,108 @@
-/* ======================== CONTENEUR MANETTE ======================== */
-.controller.dualsense {
-  background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/OPTI%20M8%20SCUF%20BACKGROUND%20(1).jpeg") no-repeat center;
-  background-size: contain;
-  width: 1100px;
-  height: 1100px;
-  position: relative;
+/* ==================== BODY ==================== */
+body { 
+    background-color: rgba(0, 0, 0, 0); 
+    margin: 0 auto; 
+    overflow: hidden; 
 }
 
-/* ======================== BOUTONS (BASE) ======================== */
-.button {
-  position: absolute;
-  opacity: 1; /* visible dès le départ pour debug */
-  transition: 0.1s ease;
-  border: 1px solid red; /* juste pour visualiser */
+/* ==================== CONTROLLER ==================== */
+.controller.xbox {
+    background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/OPTI%20M8%20SCUF%20BACKGROUND%20(1).jpeg") no-repeat center;
+    background-size: contain;
+    width: 807px;
+    height: 651px;
+    margin-left: 0;
+    margin-top: 0;
 }
 
-/* ======================== BOUTONS PRESSES ======================== */
-.button.pressed {
-  opacity: 1;
-  transform: scale(1.1) rotate(-5deg); /* légèrement incliné quand pressé */
-  filter: drop-shadow(0 0 10px cyan); /* glow cyan */
+/* ==================== STICKS ==================== */
+.xbox .sticks {
+	width: 367px;
+    height: 100px;
+    left: 220px;
+    top: 333px;
+}
+.xbox .stick {
+    background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/stick.png") no-repeat center;
+    width: 80px;
+    height: 80px;
+    transform: translate(-50%, -50%);
+}
+.xbox .stick.pressed {
+    transform: translate(-50%, -50%) scale(1.1) rotate(-5deg);
+    filter: drop-shadow(0 0 10px cyan);
+}
+.xbox .stick.right {
+    top: 0;
+    left: 267px;
 }
 
-/* ======================== EXEMPLES BOUTONS ======================== */
-/* CROIX */
-.button.cross {
-  left: 600px;
-  top: 500px;
-  width: 50px;
-  height: 50px;
-  background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/boutton%20pr%C3%A9ss%C3%A9%20final.png") no-repeat center;
-  background-size: contain;
+/* ==================== BOUTONS ABXY ==================== */
+.xbox .abxy {
+    width: 181px;
+    height: 181px;
+    left: 573px;
+    top: 178px;
+}
+.xbox .button {
+    background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/boutton%20pr%C3%A9ss%C3%A9%20final.png") no-repeat center;
+    width: 58px;
+    height: 58px;
+}
+.xbox .button.pressed {
+  	background-position-y: -59px;
+    transform: scale(1.1) rotate(-5deg);
+    filter: drop-shadow(0 0 10px cyan);
 }
 
-/* CERCLE */
-.button.circle {
-  left: 660px;
-  top: 460px;
-  width: 50px;
-  height: 50px;
-  background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/boutton%20pr%C3%A9ss%C3%A9%20final.png") no-repeat center;
-  background-size: contain;
+/* ==== EXEMPLES SPECIFIQUES ==== */
+.xbox .a { left: 61px; top: 123px; }
+.xbox .b { left: 123px; top: 62px; }
+.xbox .x { left: 0px; top: 61px; }
+.xbox .y { left: 61px; top: 0px; }
+
+/* ==================== DPAD ==================== */
+.xbox .dpad {
+	width: 144px;
+    height: 144px;
+    left: 71px;
+    top: 196px;
 }
 
-/* CARRÉ */
-.button.square {
-  left: 540px;
-  top: 460px;
-  width: 50px;
-  height: 50px;
-  background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/boutton%20pr%C3%A9ss%C3%A9%20final.png") no-repeat center;
-  background-size: contain;
+/* ==================== BACK / START ==================== */
+.xbox .back, .xbox .start {
+    width: 27px;
+    height: 57px;
+    opacity: 0;
 }
 
-/* TRIANGLE */
-.button.triangle {
-  left: 600px;
-  top: 420px;
-  width: 50px;
-  height: 50px;
-  background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/boutton%20pr%C3%A9ss%C3%A9%20final.png") no-repeat center;
-  background-size: contain;
+/* ==================== BUMPERS ==================== */
+.xbox .bumpers {
+    width: 620px;
+    height: 35px;
+    left: 93px;
+    top: 114px;
+}
+.xbox .bumper {
+    background: url("https://i.imgur.com/2YssqRT.png");
+    width: 110px;
+    height: 35px;
+    opacity: 0;
 }
 
-/* ======================== STICKS ======================== */
-.stick {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  background: url("https://raw.githubusercontent.com/Tsukimcod/improved-succotash9878654578147864/main/stick.png") no-repeat center;
-  background-size: contain;
-  transform: translate(-50%, -50%);
+/* ==================== TRIGGERS ==================== */
+.xbox .triggers {
+	width: 619px;
+    height: 108px;
+    left: 94px;
 }
-
-/* STICK GAUCHE */
-.stick.left {
-  left: 350px;
-  top: 600px;
+.xbox .trigger {
+	background: url("https://i.imgur.com/LsxmGBD.png");
+    width: 111px;
+    height: 108px;
+    opacity: 0;
 }
-
-/* STICK DROIT */
-.stick.right {
-  left: 750px;
-  top: 600px;
+.xbox .trigger.right {
+	background-position: -113px 0;
+	transform: rotateY(0);
 }
